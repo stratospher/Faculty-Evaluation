@@ -22,4 +22,5 @@ module.exports = function(sequalize,DataTypes){
 			type:DataTypes.STRING(50),
 		},
 	});
+	return Subject_New;
 }

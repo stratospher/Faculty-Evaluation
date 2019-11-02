@@ -21,4 +21,5 @@ module.exports = function(sequalize,DataTypes){
 			
 		},
 	});
+	return Logged_Data;
 }

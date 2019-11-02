@@ -9,4 +9,5 @@ module.exports = function(sequalize,DataTypes){
 
 		},
 	});
+	return College;
 }
