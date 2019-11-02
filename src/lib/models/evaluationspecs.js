@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  const Classes = sequelize.define('classes', {
+  const evaluation_specs = sequelize.define('evaluation_specs', {
     col_code: {
       type: DataTypes.STRING(3),
     },
@@ -35,5 +35,5 @@ module.exports = function (sequelize, DataTypes) {
     },
   });
 
-  return Classes;
+  return evaluation_specs;
 };
