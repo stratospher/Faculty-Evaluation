@@ -1,0 +1,246 @@
+<html>
+<head>
+<style>
+ table { 
+                border: 2px solid white; 
+                text-align:left; 
+                margin-top:130px;
+                
+
+            } 
+            th, td { 
+                /*padding: 15px; */
+                background-color:none; 
+                border: 2px solid white; 
+                text-align:left;
+                height: 30px;
+
+            } 
+            tr{
+              height: 2px;
+
+            }
+              
+            table.h2 { 
+            color:black; 
+            } 
+            h2{
+               text-align:center;}
+            
+            h1{
+               text-align:center;}
+            div{
+             position:relative;
+           }
+.fixed-header, .fixed-footer{
+        width: 100%;
+        position: absolute;        
+        background: #333;
+        padding: 10px 0;
+        color: #fff;
+    }
+    .fixed-header{
+        top: 0;
+        left:0;
+    }
+    .fixed-footer{
+        bottom: 0;
+        left:0;
+    }
+    .container{
+        width: 100%;
+        margin: 0 auto; /* Center the DIV horizontally */
+    }
+    nav a{
+        color: #fff;
+        text-decoration: none;
+        padding: 7px 25px;
+        display: inline-block;
+        text-align: right;
+    }
+     input[type="submit"],[type="reset"]{
+        width: 20%;
+        padding: 3%;
+	background-color:#535b63;
+       /* border:50;*/
+	/*box-sizing: border-box;*/
+	cursor: pointer;
+	font-weight: bold;
+        color:#ffffff;
+     }
+     input[type="submit"],[type="reset"]{
+        width: 10%;
+        padding: 1%;
+	background-color:#535b63;
+       /* border:50;*/
+	/*box-sizing: border-box;*/
+	cursor: pointer;
+	font-weight: bold;
+        color:#ffffff;
+     }
+</style>
+</head>
+
+<!-- <script>
+    function refreshPage(){
+      window.location.reload();
+    }
+</script> -->
+
+<body>
+<% console.log(faculty.facname)%>
+<div class="fixed-header">
+    <h1>COLLEGE OF ENGINEERING TRIVANDRUM</h1>
+    <h2>FACULTY EVALUATION PORTAL</h2>
+        
+    </div>
+     
+    <div class="fixed-footer">
+        <div class="container"></div>        
+    </div>
+
+<table style="width:100%" align="center" >
+   <form action='/question/do' method='POST'> 
+  <tr>
+   <th colspan="2" bgcolor=white>
+   
+   </th>
+  </tr>
+  <p>
+  <tr>
+    <th>1.Subject knowledge of the teacher</th>
+    <td><input type="radio" name="ans1" value="Excellent"> Excellent
+  <input type="radio" name="ans1" value="Good"> Good
+  <input type="radio" name="ans1" value="Fair"> Fair 
+  <input type="radio" name="ans1" value="Poor"> Poor
+  <input type="radio" name="ans1" value="Blank"> Blank
+</td>
+
+    
+  </tr>
+  <tr>
+    <th>2.Clarity and understanding of teacher's explanation</th>
+    <td ><input type="radio" name="ans2" value="Excellent"> Excellent
+  <input type="radio" name="ans2" value="Good"> Good
+  <input type="radio" name="ans2" value="Fair"> Fair 
+  <input type="radio" name="ans2" value="Poor"> Poor
+  <input type="radio" name="ans2" value="Blank"> Blank</td>
+    
+  </tr>
+  <tr>
+    <th>3.Teacher's willingness to help</th>
+    <td><input type="radio" name="ans3" value="Excellent"> Excellent
+  <input type="radio" name="ans3" value="Good"> Good
+  <input type="radio" name="ans3" value="Fair"> Fair 
+  <input type="radio" name="ans3" value="Poor"> Poor
+  <input type="radio" name="ans3" value="Blank"> Blank</td>
+    
+  </tr>
+   <tr>
+    <th>4.Approximate % of classes not engaged by teacher</th>Less than
+10
+
+10 to 25 More than
+25
+
+Blank
+    <td><input type="radio" name="ans4" value="Less than 10"> Less than 10
+  <input type="radio" name="ans4" value="10 to 15"> 10 to 25
+  <input type="radio" name="ans4" value="More than 25"> More than 25
+  <input type="radio" name="ans4" value="Blank"> Blank
+  </td>
+    
+  </tr>
+   <tr>
+    <th>5.Whether teacher dictates note only without explanation</th>
+    <td> <input type="radio" name="ans5" value="No"> No
+  <input type="radio" name="ans5" value="Yes"> Yes
+  <input type="radio" name="ans5" value="Blank"> Blank</td>
+    
+  </tr>
+  <tr>
+    <th>6.Teacher’s ability to
+organise lectures.</th>
+    <td><input type="radio" name="ans6" value="Excellent" >  Excellent
+  <input type="radio" name="ans6" value="Satisfactory"> Satisfactory
+  <input type="radio" name="ans6" value="Inadequate">Inadequate
+    <input type="radio" name="ans6" value="Blank">Blank</td>
+    
+  </tr>
+  <tr>
+    <th>7.Speed of
+  presentation.</th>
+    <td><input type="radio" name="ans7" value="Just Right">Just right
+  <input type="radio" name="ans7" value="Too Fast"> Too fast
+  <input type="radio" name="ans7" value="Too slow">Too slow
+    <input type="radio" name="ans7" value="Blank">Blank</td>
+    
+  </tr>
+  <tr>
+    <th>8.Does the teacher encourage questioning</th>
+    <td><input type="radio" name="ans8" value="Yes">  Yes
+  <input type="radio" name="ans8" value="Sometimes"> Sometimes
+  <input type="radio" name="ans8" value="No">No
+    <input type="radio" name="ans8" value="Blank">Blank</td>
+    
+  </tr>
+  <tr>
+    <th>9.Behaviour of the
+teacher.</th>
+    <td><input type="radio" name="ans9" value="Pleasant">Pleasant
+  <input type="radio" name="ans9" value="Indifferent">Indifferent
+  <input type="radio" name="ans9" value="Unpleasant">Unpleasent
+    <input type="radio" name="ans9" value="Blank">Blank</td>
+    
+  </tr>
+  <tr>
+    <th>10.Sincerity of the
+teacher.</th> 
+    <td><input type="radio" name="ans10" value="Sincere">  Sincere
+  <input type="radio" name="ans10" value="Not Sincere"> Not Sincere
+  <input type="radio" name="ans10" value="Unable to judge">Unable to Judge
+    <input type="radio" name="ans10" value="Blank">Blank</td>
+    
+  </tr>
+  <tr>
+    <th>11.Overall teaching
+effectiveness of the
+teacher.</th>
+    <td><input type="radio" name="ans11" value="Excellent">  Excellent
+  <input type="radio" name="ans11" value="Good"> Good
+  <input type="radio" name="ans11" value="Fair">Fair
+  <input type="radio" name="ans11" value="Poor">Poor
+  
+    <input type="radio" name="ans11" value="Blank">Blank</td>
+    
+  </tr>
+   <tr>
+    <th>12.Indicate briefly the strength and weakness of the teacher</th>
+    <td><input type="text" > </td>
+    
+  </tr>
+   <tr>
+    <th>13.Any other relevent information</th>
+    <td><input type="text"> </td>
+    
+  </tr>
+  </p>
+  <div>
+  <th></th>
+  <th><input type="submit" name="Submit" value="Submit">
+
+    <input type="reset" value="RESET" name="RESET"> </th>
+     
+  
+ 
+  </div>
+  <th><input type="hidden" name="subject" value="<%=subject%>"></th>
+  <th><input type="hidden" name="facname" value="<%=faculty.facname%>"></th>
+  <th><input type="hidden" name="subid" value="<%=faculty.subid%>"></th>
+  <th><input type="hidden" name="facid" value="<%=faculty.facid%>"></th>
+
+</form>
+    
+</table>
+</body>
+</html>

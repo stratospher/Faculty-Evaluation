@@ -1,0 +1,101 @@
+<html>
+<head>
+<style>
+form{
+    display:inline;
+}
+ table {
+                border: 2px solid white;
+                text-align:center;
+                margin-top:140px;
+
+            }
+            th, td {
+                padding: 15px;
+                background-color:none;
+                border: 2px solid white;
+                text-align:center;
+            }
+             
+            table.h2 {
+            color:black;
+            }
+            h2{
+               text-align:center;}
+           
+            h1{
+               text-align:center;}
+.fixed-header, .fixed-footer{
+        width: 100%;
+        position: absolute;        
+        background: #333;
+        padding: 10px 0;
+        color: #fff;
+    }
+    .fixed-header{
+        top: 0;
+        left:0;
+    }
+    .fixed-footer{
+        bottom: 0;
+        left:0;
+    }
+    .container{
+        width: 100%;
+        margin: 0 auto; /* Center the DIV horizontally */
+    }
+    nav a{
+        color: #fff;
+        text-decoration: none;
+        padding: 7px 25px;
+        display: inline-block;
+        text-align: right;
+    }
+     input[type="submit"],[type="reset"]{
+        width: 20%;
+        padding: 3%;
+background-color:#535b63;
+       /* border:50;*/
+/*box-sizing: border-box;*/
+cursor: pointer;
+font-weight: bold;
+        color:#ffffff;
+     }
+</style>
+</head>
+<body>
+
+<div class="fixed-header">
+    <h1>COLLEGE OF ENGINEERING TRIVANDRUM</h1>
+    <h2>FACULTY EVALUATION PORTAL</h2>
+       
+    </div>
+     
+    <div class="fixed-footer">
+        <div class="container"></div>        
+    </div>
+    <form action='/question' method="POST">
+<table style="width:40%" align="center" >
+  <tr>
+   <th colspan="4" bgcolor=white>
+  <h2> FACULTY EVALUATION </h2>
+   </th>
+  </tr>
+  <tr>
+  <th>Select Subjects</th></tr>
+  <tr><th><div><font color="black"></font> <select id="subname" name="subname" required>
+        <option></option>
+    <% keys = Object.keys(subject)
+    for(var i=0; i < keys.length ; i++) { %>
+    
+  <option value ="<%= Object.values(subject[i]) %>"><%= Object.values(subject[i])%></option>
+   <% } %>  </select></div></th></tr>
+   <tr><td>
+     <input type="submit"  name="Proceed" value="Proceed"></form>
+<form action='/' method="GET"> <input type="submit" value="Back"></form></td></tr>
+</table>
+
+
+
+</body>
+</html>

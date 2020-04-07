@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<title>Login</title>
+	<head>
+		<meta charset="utf-8">
+		<title>FACULTY EVALUATION</title>
+		<style>
+		.login-form {
+			width: 300px;
+			margin: 0 auto;
+			font-family: Tahoma, Geneva, sans-serif;
+		}
+		h1{
+			text-align: center;}
+		.login-form h1 {
+			text-align: center;
+			color: #4d4d4d;
+			font-size: 24px;
+			/*padding: 25%;*/
+			padding-top:50%;
+			margin-left:-10%;
+			margin-top: 30%;
+			margin-bottom: 30%;
+
+			
+		}
+		
+		
+		h2{
+			text-align: center;
+		}
+
+		.login-form input[type="password"],
+		.login-form input[type="text"] {
+			width: 100%;
+			padding: 15px;
+			border: 1px solid #dddddd;
+			margin-bottom: 15px;
+			box-sizing:border-box;
+		}
+		.login-form input[type="submit"] {
+			width: 100%;
+			padding: 15px;
+			background-color: #535b63;
+			border: 100;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-weight: bold;
+			color: #ffffff;
+		}
+	 .fixed-header, .fixed-footer{
+
+        width: 100%;
+
+        position: absolute;        
+
+        background: #333;
+
+        padding: 0px 0px;
+
+        color: #fff;
+
+
+    }
+
+    .fixed-header{
+
+        top: 0;
+        left: 0;
+    }
+
+    .fixed-footer{
+
+        bottom: 0;
+        left: 0;
+        padding: 10px 0px;
+    }
+
+    .container{
+
+        width: 100%;
+
+        margin: 0 auto; /* Center the DIV horizontally */
+  }
+
+    nav a{
+
+        color: #fff;
+
+        text-decoration: none;
+
+        padding: 7px 25px;
+
+        display: inline-block;
+        text-align: right;
+
+    }
+		</style>
+	</head>
+	<body>
+		<!--<script>
+			function createItem(){
+				localStorage.setItem("userid","userId")
+
+			}
+		</script>-->
+		    <div class="fixed-header">
+            <h1>COLLEGE OF ENGINEERING TRIVANDRUM </h1>
+            <h2>FACULTY EVALUATION PORTAL </h2>
+        <div class="container">
+
+            <!-- <nav>
+
+                <a href="/admin">Admin Login</a>
+
+            </nav> -->
+
+        </div>
+
+    </div>
+
+
+    <div class="fixed-footer">
+
+        <div class="container">
+        </div>        
+
+    </div>
+		<div class="login-form">
+			<h1> LOGIN</h1>
+			<form action='/login' method='POST'>
+				<input type="text" name="userId" placeholder="Username" required>
+				<input type="password" name="password" placeholder="Password" required>
+				<input type="submit" name="submit" placeholder="SUBMIT" value="SUBMIT">
+			</form>
+		</div>
+	
+	</body>
+</html>

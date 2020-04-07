@@ -1,0 +1,164 @@
+<html>
+<head>
+<TITLE>Add Subject</TITLE>
+<STYLE>
+    form{
+        display:inline;
+    }
+th{
+padding-left:30%;
+}
+.fixed-header, .fixed-footer{
+        width: 100%;
+        position: absolute;        
+        background: #333;
+        padding: 10px 0;
+        color: #fff;
+    }
+    .fixed-header{
+        top: 0;
+        left:0;
+    }
+    
+    .container{
+        width: 100%;
+        margin: 0 auto; /* Center the DIV horizontally */
+    }
+    #a{
+      text-align: right;
+    }
+</STYLE>
+
+</head>
+<BODY>
+<div class="fixed-header">
+<center>
+    <h1>COLLEGE OF ENGINEERING TRIVANDRUM</h1>
+    <h2>FACULTY EVALUATION PORTAL</h2>
+        </center>
+    </div>
+     
+    <div class="fixed-footer">
+        <div class="container"></div>        
+    </div>
+  
+<SCRIPT language="javascript">
+function addRow(tableID) {
+
+var table = document.getElementById(tableID);
+
+var rowCount = table.rows.length;
+var row = table.insertRow(rowCount);
+
+var cell1 = row.insertCell(0);
+var element1 = document.createElement("input");
+element1.type = "text";
+element1.name="txtbox[]";
+cell1.appendChild(element1);
+
+var cell2 = row.insertCell(1);
+//cell2.innerhtml = rowCount + 1;
+                        var element2 = document.createElement("input");
+element2.type = "text";
+element2.name="txtbox[]";
+cell2.appendChild(element2);
+
+var cell3 = row.insertCell(2);
+var element3 = document.createElement("input");
+element3.type = "text";
+element3.name = "txtbox[]";
+cell3.appendChild(element3);
+
+                        var cell4 = row.insertCell(3);
+var element4 = document.createElement("input");
+element4.type = "text";
+element4.name="txtbox[]";
+cell4.appendChild(element4);
+
+var cell5 = row.insertCell(4);
+                        var element5 = document.createElement("input");
+element5.type = "text";
+element5.name="txtbox[]";
+cell5.appendChild(element5);
+
+var cell6 = row.insertCell(5);
+var element6 = document.createElement("input");
+element6.type = "text";
+element6.name = "txtbox[]";
+cell6.appendChild(element6);
+
+
+}
+
+/*function deleteRow(tableID) {
+try {
+var table = document.getElementById(tableID);
+var rowCount = table.rows.length;
+
+for(var i=0; i<rowCount; i++) {
+var row = table.rows[i];
+//var chkbox = row.cells[0].childNodes[0];//
+if(null != chkbox && true == chkbox.checked) {
+table.deleteRow(i);
+rowCount--;
+i--;
+}
+
+
+}
+}catch(e) {
+alert(e);
+}
+}*/
+
+</SCRIPT>
+
+<INPUT type="button" style="margin-top:12%"  value="ADD SUBJECT" onclick="addRow('dataTable')" /> 
+<form action="/addsubject/create" method="POST">
+<!--INPUT type="button" value="Delete Row" onclick="deleteRow('dataTable')" />-->
+<table>
+<td>
+<th style="padding-left:20%">Classname</th>
+<th style="padding-left:50%">SubId</th>
+<th style="padding-left:80%">ElectiveId</th>
+<th style="padding-left:110%">SubName</th>
+<th style="padding-left:140%">FacId</th>
+<th style="padding-left:170%">FacName</th>
+</td>
+</table>
+<!-- <form method="POST" action="/addsubject"> --> 
+<TABLE id="dataTable" width="350px" border="1">
+<TR>
+<TD>
+    <div><font color="black"></font> <select id="classname" name="classname">
+    <option>Select Class</option>  
+    <% keys = Object.keys(classes)
+    for(var i=0; i < keys.length ; i++) { %>
+  <option value ="<%= Object.values(classes[i]) %>"><%= Object.values(classes[i])%></option>
+   <% } %> 
+</select>  </div> </TD>
+<TD><INPUT type="text" name="subid" id="subid"/> </TD>
+<TD> <INPUT type="text" name="electiveid" id="electiveid"/> </TD>
+            <TD><INPUT type="text" name="subname" id="subname"/></TD>
+<TD><INPUT type="text" name="facid" id="facid"/> </TD>
+<TD> <INPUT type="text" name="facname" id="facname"/> </TD>
+</TR>
+</TABLE>
+
+<%console.log(classes) %>
+
+    
+
+  
+
+<INPUT type="submit" style="margin-top:30%"  value="SUBMIT">
+</form>
+
+<form action="/hod" action="GET">
+    <input style="margin-right:10%"; type="submit" value="Cancel"></form>
+<!-- <a href="">View Added Subjects</a> -->
+
+
+</BODY>
+</html>
+

@@ -22,16 +22,16 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
     },
     roll_mis: {
-      type: Datatypes.INTEGER(),
+      type: DataTypes.INTEGER(),
     },
     n_elective: {
-      type: Datatypes.INTEGER(),
+      type: DataTypes.INTEGER(),
     },
     class: {
-      type: Datatypes.INTEGER(),
+      type: DataTypes.INTEGER(),
     },
     aflag: {
-      type: Datatypes.INTEGER(),
+      type: DataTypes.INTEGER(),
     },
   });
 

@@ -26,7 +26,7 @@ module.exports=function(sequelize,DataTypes){
 		},
 
 	});
-	return eval_score;
+	return evalscore;
 
 
 };

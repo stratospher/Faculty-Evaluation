@@ -1,0 +1,121 @@
+<html>
+<head>
+  <title>Add User</title>
+<style>
+  form{
+        display:inline;
+    }
+ table { 
+                border: 2px solid white; 
+                text-align:center; 
+                margin-top:140px;
+
+            } 
+            th, td { 
+                padding: 15px; 
+                background-color:none; 
+                border: 2px solid white; 
+                text-align:center; 
+            } 
+              
+            table.h2 { 
+            color:black; 
+            } 
+            h2{
+               text-align:center;}
+            
+            h1{
+               text-align:center;}
+.fixed-header, .fixed-footer{
+        width: 100%;
+        position: absolute;        
+        background: #333;
+        padding: 10px 0;
+        color: #fff;
+    }
+    .fixed-header{
+        top: 0;
+        left:0;
+    }
+    .fixed-footer{
+        bottom: 0;
+        left:0;
+    }
+    .container{
+        width: 100%;
+        margin: 0 auto; /* Center the DIV horizontally */
+    }
+    nav a{
+        color: #fff;
+        text-decoration: none;
+        padding: 7px 25px;
+        display: inline-block;
+        text-align: right;
+    }
+     input[type="submit"],[type="reset"]{
+        width: 20%;
+        padding: 3%;
+	background-color:#535b63;
+       /* border:50;*/
+	/*box-sizing: border-box;*/
+	cursor: pointer;
+	font-weight: bold;
+        color:#ffffff;
+     }
+</style>
+</head>
+<body>
+
+<div class="fixed-header">
+    <h1>COLLEGE OF ENGINEERING TRIVANDRUM</h1>
+    <h2>FACULTY EVALUATION PORTAL</h2>
+        
+    </div>
+     
+    <div class="fixed-footer">
+        <div class="container"></div>        
+    </div>
+  <form action="/users/create" method="POST">  
+
+<table style="width:40%" align="center" >
+  <tr>
+   <th colspan="2" bgcolor=white>
+   <h2> ADD NEW USER </h2>
+   </th>
+  </tr>
+  <p>
+  <tr>
+    <th>UserName</th>
+    <td><input type="text" name="userId" id="userId"  required></td>
+    
+  </tr>
+  <tr>
+    <th>User Type</th>
+    <td ><input type="text" name="usertype" id="usertype" required></td>
+    
+  </tr>
+  <tr>
+    <th>College</th>
+    <td><input type="text" name="col_code" id="col_code" required ></td>
+    
+  </tr>
+   <tr>
+    <th>Department</th>
+    <td><input type="text" name="dep_code" id="dep_code" required></td>
+    
+  </tr>
+   <tr>
+    <th>Password</th>
+    <td><input type="password" name="passwd" id="passwd" required></td>
+    
+  </tr>
+  </p>
+  <td colspan="2"><input type="submit" name="Register" value="Register">
+  </form>
+  <!--<form action="/users" method="GET">-->
+    <input type="reset" value="Cancel" name="reset"></td>
+    <!-- <input style="margin-left:10%"; type="reset" value="Cancel"></td> -->
+  <!--</form>-->
+</table>
+<br>
+</body>

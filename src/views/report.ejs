@@ -1,0 +1,97 @@
+<html>
+<head><title>Generate Report</title>
+</head>
+<style>
+h1{
+text-align: center;}
+h2{
+text-align: center;
+}
+h5{
+margin-top:15%;
+margin-left:15%;
+}
+.fixed-header, .fixed-footer{
+        width: 100%;
+        position: fixed;        
+        background: #333;
+        /*padding: 0px 0px;*/
+        color: #fff;
+    }
+    .fixed-header{
+        top: 0;
+        left: 0;
+    }
+    .fixed-footer{
+        left: 0;
+        padding: 10px 0px;
+        bottom: 0;
+    }
+    .container{
+        width: 100%;
+        margin: 0 auto; /* Center the DIV horizontally */
+  }
+   
+    a:visited {
+  color: black;
+}
+table{
+border-collapse:collapse;
+border:2px solid white;
+margin-left:25%;
+margin-top:4%;
+padding:15%;
+width:50%;}
+th,td{
+border:2px solid white;
+}
+.tabhead{
+font-size:30px;color:black;margin-top:10%;margin-bottom:-60px;padding:10px;text-align: center;}
+.table-hover tbody tr:hover th {
+     color:green;
+/*font-size:20px;
+transition:s;
+text-decoration:underline;*/
+     font-style:italic;
+}
+a:link {
+  text-decoration: none;
+  color:black;
+}
+a:hover{
+	color:gray;
+}
+</style>
+<body>
+    <% console.log(Object.values(subfac[0]))%>
+	 <div class="fixed-header">
+            <h1>COLLEGE OF ENGINEERING TRIVANDRUM </h1>
+            <h2>FACULTY EVALUATION PORTAL </h2>
+       
+    </div>
+    <h2>Select Subject</h2>
+<!--<h1 class="tabhead">MAIN MENU</h1>-->
+<table class="table-hover"style="margin-top: 11%" cellpadding="6">
+<h5></h5>
+<h5 style="margin-top:4%" ></h5>
+<center>
+        <h2>Select Subject</h2>
+<form action="/report/find" method="POST">
+    <select id="sub" name="sub">
+        <option></option>  
+        <% keys = Object.keys(subfac)
+        for(var i=0; i < keys.length ; i++) { %>
+      <option value ="<%= Object.values(subfac[i]) %>"><%=Object.values(subfac[i])%></option>
+       <% } %>  </select>
+<input type="submit" value="Generate">
+</form>
+</center>
+</table>
+<div class="fixed-footer">
+
+        <div class="container">
+        </div>        
+
+    </div>
+</body>
+</html>
