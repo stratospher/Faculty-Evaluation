@@ -17,10 +17,10 @@ app.set('view engine', 'ejs');
 app.use(favicon());
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({extended:true}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({secret: "Shh, its a secret!"}));
+app.use(session({secret: "Shh, its a secret!",resave:true,saveUninitialized:true}));
 
 app.use('/', routes);
 // app.use('/users', users);

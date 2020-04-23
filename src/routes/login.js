@@ -4,7 +4,7 @@ var router = express.Router();
 
 const session = require('express-session');
 const app = express();
-app.use(session({secret: 'ssshhhhh'}));
+app.use(session({secret: 'ssshhhhh',resave:true,saveUninitialized:true}));
 
 //router.get('/',(req,res,next)=>{
 //res.render("../views/login.ejs");

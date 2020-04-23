@@ -39,6 +39,8 @@ router.post('/find',(req,res,next)=>{
             
         });
 		res.redirect("/report");
+		console.log("going to print re");
+
 		console.log(re)
 	})
 	.catch(er =>{
